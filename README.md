@@ -1,2 +1,2 @@
 # avunguye.github.io
-An Vu's Portfolio
+Ann Vu's Personal Portfolio
