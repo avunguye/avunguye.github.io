@@ -1025,6 +1025,13 @@ main {
   line-height: 1.3;
 }
 
+.project-description {
+  font-family: 'Poppins', sans-serif; 
+  color: #ffffff; 
+  font-size: 12px; 
+  margin-left: 24px;
+}
+
 .project-category {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
