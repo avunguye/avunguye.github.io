@@ -829,7 +829,7 @@ main {
 }
 
 .timeline-text {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
