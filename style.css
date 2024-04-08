@@ -1500,6 +1500,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #RESUME
    */
 
+  .break {word-break: break-all;}
   .timeline-list { margin-left: 65px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
