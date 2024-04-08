@@ -1,0 +1,59 @@
+---
+title: "BAT 3302 - Poisson Regression"
+author: "Malaika Tiglao - An Vu Nguyen Dieu - Thomas Pena"
+date: "5/8/2022"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Introduction to Poisson Regression:
+- Poisson regression is a generalized linear model form of regression analysis used to model count data.
+    - Count data: a type of data in which the observations can take only the counting numbers, non-negative integer values (0, 1, 2, 3,...). These integers arise from counting rather than ranking.
+
+- Poisson regression model:
+        $log(\lambda_{i})=\beta_{0}+\beta_{1}x_{i}$
+
+### Poisson Regression Assumptions
+- Poisson Response: The response variable is a count per unit of time or space, described by a Poisson distribution.
+- Independence: The observations must be independent of one another.
+- Mean = Variance: By definition, the mean of a Poisson random variable must be equal to its variance.
+- Linearity: The log of the mean rate, $log(\lambda)$, must be a linear function of x.
+
+
+
+## When Poisson Regression should be used:
+- Poisson regression, also known as a log-linear model, should be used when the outcome variable is count data.
+- Examples: 
+   - how many heart attacks or strokes one’s had.
+   
+   ![heart attacks/strokes](aug-2021-capsule2-drawing-heart.jpg){#id .class width=20% height=20%}
+   - how many days in the past month one’s used [insert your favorite illicit    substance here].
+   
+   ![weed](marijuana-485493063-650x428.jpg){#id .class width=20% height=20%}
+   - how many days from outbreak until infection.
+   
+   ![bact](Bacteria ING 02I39015_edit.jpg){#id .class width=20% height=20%}
+
+## Two Sample Scenarios with A Snip of Data Structure (1):
+- Sample Scenario 1: Predict the number of awards earned by a student in high school based on the program they enrolled in and their math final exam score.
+
+```{r echo = FALSE}
+award <- read.csv("poisson_sim.csv")
+award <- within(award, {prog <- factor(prog, levels=1:3, labels=c("General", "Academic", "Vocational"))
+                id <- factor(id)
+})
+
+head(award, 12)
+```
+
+## Two Sample Scenarios with A Snip of Data Structure (2):
+- Sample Scenario 2: Predict the number of warp breaks per loom based on the effect of wool type (A or B) and tension (low, medium, or high).
+
+```{r echo = F}
+breaks <- warpbreaks
+head(breaks, 12)
+```
+
